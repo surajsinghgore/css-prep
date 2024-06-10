@@ -1,0 +1,85 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+h1{
+    text-align: center;
+    padding: 20px 0;
+    font-size: 3.5rem;
+}
+.parent{
+display: grid;
+max-width: 1200px;
+}
+.box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+    margin-inline: 2rem;
+min-height: 200px;
+color: white;
+font-size: 2.3rem;
+border-radius: 3.1px 0px 0px 0px;
+
+}
+
+
+.child1{
+    background-color: #BA56F6;
+}
+.child2{
+    background-color: #FF6161;
+}
+.child3{
+    background-color: #505CCA;
+}
+.child4{
+    background-color: #3DAD99;
+}
+.child5{
+    background-color: #BE3690;
+}
+
+
+@media (min-width: 720px){
+   
+    .parent{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .child1{
+       grid-column-end: 3;
+       grid-column-start: 1;
+    }
+    .child3{
+        grid-row-start: span 2;
+        grid-column-start: 2;
+     }
+     .child5{
+        grid-column-end: 3;
+        grid-column-start: 1;
+     }
+}
+
+
+@media (min-width: 1080px){
+    .parent{
+grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+    .child1{
+       
+        grid-column-start: span 2;
+      
+     }
+     .child3{
+         grid-column-start: auto;
+         grid-column-end: auto;
+      }
+      .child5{
+         grid-column-end: auto;
+         grid-column-start: auto;
+        grid-column-start: span 2;
+
+      }
+}
